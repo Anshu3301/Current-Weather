@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <h3>
+    </h3>
+    <div id="enter_search">
+        <input type="text" name="" id="" placeholder=" Search..." >
+        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+    </div>
+
+    <div id="outermost">
+        <div id="location_date">
+          <h2 style="font-size: 30px;"><i class="fa-solid fa-location-dot"></i> <span id="cityName" ></span>, <span id="country"></span></h2>
+          <h3 style="margin-left: 30px; font-size: 20px;"><span id="day"></span>, <span id="date"></span></h3>
+        </div>
+        
+        <div id="outer">
+            <div id="upper">
+                <h1><span id="icon"></span></h1>
+                <h1 style="font-size: 55px;"><span id="temp"></span></h1>
+                <sup style="font-size: 25px; font-weight: 600; margin-bottom: 15px;">&#xb0;C</sup>
+            
+                <div id="temps" class="lower_divs">
+                    <div class="upper_lower">
+                        <h2><span id="max_temp"></span>&#xb0;</h2>
+                        <h4>Max</h4>
+                    </div>
+                    <div class="upper_lower">
+                        <h2><span id="min_temp"></span>&#xb0;</h2>
+                        <h4>Min</h4>
+                    </div>
+                </div>
+            </div>   
+            <hr style=" background-color: rgb(40, 39, 39);">
+            <div id="lower">
+                <div id="sun" class="lower_divs">
+                    <div class="upper_lower">
+                        <h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" id="bi_sunrise" class="bi bi-sunrise"  viewBox="0 0 16 16" style="position:relative; top:5px;">
+                            <path d="M7.646 1.146a.5.5 0 0 1 .708 0l1.5 1.5a.5.5 0 0 1-.708.708L8.5 2.707V4.5a.5.5 0 0 1-1 0V2.707l-.646.647a.5.5 0 1 1-.708-.708zM2.343 4.343a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L2.343 5.05a.5.5 0 0 1 0-.707m11.314 0a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0M8 7a3 3 0 0 1 2.599 4.5H5.4A3 3 0 0 1 8 7m3.71 4.5a4 4 0 1 0-7.418 0H.499a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1h-3.79zM0 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 10m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+                          </svg>
+                          <span id="sunrise"></span></h2>
+                          <h4 style="margin-left: 12px;">Sunrise</h4>
+                    </div>
+                    <div class="upper_lower">
+                        <h2>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" id="bi_sunset" class="bi bi-sunset" viewBox="0 0 16 16" style="position:relative; top:5px;">
+                            <path d="M7.646 4.854a.5.5 0 0 0 .708 0l1.5-1.5a.5.5 0 0 0-.708-.708l-.646.647V1.5a.5.5 0 0 0-1 0v1.793l-.646-.647a.5.5 0 1 0-.708.708zm-5.303-.51a.5.5 0 0 1 .707 0l1.414 1.413a.5.5 0 0 1-.707.707L2.343 5.05a.5.5 0 0 1 0-.707zm11.314 0a.5.5 0 0 1 0 .706l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zM8 7a3 3 0 0 1 2.599 4.5H5.4A3 3 0 0 1 8 7m3.71 4.5a4 4 0 1 0-7.418 0H.499a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1h-3.79zM0 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 10m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+                          </svg>
+                          <span id="sunset"></span></h2>
+                          <h4 style="margin-left: 16px;">Sunset</h4>
+                    </div>
+                </div>
+                <div style="margin-left: 10px;" id="visibility_pressure" class="lower_divs">
+                    <div class="upper_lower">
+                       <h2><i class="fa-solid fa-eye fa-xs"></i> <span id="visibility"></span> Km</h2>
+                       <h4 style="margin-left: 12px;">Visibility</h4>
+                    </div>
+                    <div style="margin-left: 13px;" class="upper_lower">
+                        <h2><i class="fa fa-tachometer fa-xs" aria-hidden="true"></i> <span id="pressure"></span> hPa</h2>
+                        <h4 style="margin-left: 32px;">Pressure</h4>
+                    </div>
+                </div>
+                <div  id="humidity_wind" class="lower_divs">
+                    <div class="upper_lower">
+                       <h2><i id="droplet" class="fa-solid fa-droplet fa-xs"> </i> <span id="humidity"></span>%</h2>
+                       <h4>Humidity</h4>
+                    </div>
+                    <div class="upper_lower">
+                        <h2><i id="wind" class="fa-solid fa-wind fa-xs"></i> <span id="windspeed"></span> m/h</h2>
+                        <h4>Wind Speed</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 id="weather_description"><span id="weather_description_text" style="color: #cbc5c5;"></span></h3>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/466c081ab2.js" crossorigin="anonymous"></script>
+</body>
+</html>
