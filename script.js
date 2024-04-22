@@ -19,7 +19,7 @@ function UnixToDate(unixTimestamp) {
 }
 
 function UnixToTime(unixTimestamp) {
-    const dateObj = new Date(unixTimestamp*1000);
+    const dateObj = new Date(unixTimestamp*1000);      // Converting to milliseconds
     
     let hour = `${dateObj.getHours()}`;
     let minute = `${dateObj.getMinutes()}`;
