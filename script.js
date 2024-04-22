@@ -14,9 +14,9 @@ function UnixToDate(unixTimestamp) {
     if(month.length==1){
       month='0'+month;
     }
-  
     return `${day}/${month}`;
 }
+
 
 function UnixToTime(unixTimestamp) {
     const dateObj = new Date(unixTimestamp*1000);      // Converting to milliseconds
@@ -33,6 +33,7 @@ function UnixToTime(unixTimestamp) {
     
     return ` ${hour}:${minute}`;
 }
+
 
 function select_description(x){
     if(x=='01d' || x=='01n'){
