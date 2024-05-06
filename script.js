@@ -73,7 +73,7 @@ function getWeatherByLocation(city){
 
        // console.log(response);
 
-        if(response.cod == 200){     //i.e. if city is found
+        if(response.cod == 200){     // i.e. if city is found
             cityName.innerHTML = response.name;
             country.innerHTML = response.sys.country;
             day.innerHTML = weekdays[Math.floor((response.dt/86400) + 4) % 7];
